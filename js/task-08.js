@@ -12,8 +12,10 @@ function onDataCheck(event) {
     const emailValue = event.target.elements.email.value
     const passwordValue = event.target.elements.password.value
 
-    if (emailValue === "" || passwordValue === "")
+    if (emailValue === "" || passwordValue === "") {
         alert("Усі поля мають бути заповнені. Будь-ласка надайте повні дані.")
+        return
+    }
     
     let dataInput = {
         [emailName]: emailValue,
